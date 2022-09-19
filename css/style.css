@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* global css */
+/* html { */
+    /* scroll-behavior: smooth; */
+/* } */
+:root {
+    --site-color:#9EF23E;
+}
+body {
+    font-family: 'Roboto';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Quicksand';
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .7s;
+
+}
+.btn {
+    background-color: #4d5168;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    border-radius: 1rem;
+    border: 1px solid #4d5168;
+    margin-top: 1rem;
+    font-family: 'Quicksand';
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+.btn:hover {
+    background-color: #fff;
+    color: #4d5168;
+    border: 1px solid var(--site-color);
+}
+.container {
+    padding: 2rem 5rem;
+}
+p {
+    line-height: 1.6rem;
+}
+.title {
+    padding: 2rem 0;
+}
+
+/* navbar */
+.navbar {
+    padding: 0rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.navbar li {
+    list-style: none;
+    display: inline-block;
+}
+.navbar a {
+    padding: 1rem;
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+.navbar li a:hover {
+    color: var(--site-color);
+}
+.navbar-logo i {
+    color: var(--site-color);
+    font-size: 2rem;
+}
+.toggle {
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.navbar.fixed {
+    background-color: rgba(255,255,255,0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Home */
+#home .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+#home .home-content,
+#home .home-img {
+    width: 50%;
+}
+#home .home-img {
+    text-align: center;
+}
+#home .home-img img {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    border: 5px solid var(--site-color);
+}
+#home .home-content {
+    color: #333;
+}
+#home .home-content h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+/* service */
+#service .service-header {
+    text-align: center;
+}
+.service-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.service-body .service-img,
+.service-body .service-content {
+    width: 50%;
+}
+.service-img {
+    text-align: center;
+}
+.service-body .service-img img {
+    width: 30vw;
+    height: 30vw;
+}
+.service-content .service-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+.service-box .service-box-img {
+    width: 20%;
+    padding: 1rem;
+}
+.service-box .service-box-content {
+    width: 80%;
+}
+.service-box .service-box-img svg {
+    fill: var(--site-color);
+}
+
+/* project */
+.project {
+    background: linear-gradient(to right, var(--site-color), #11D8C4);
+}
+.project .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+    flex-wrap: wrap;
+}
+.project .container .project-box {
+    text-align: center;
+}
+.project .container .project-box span {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 2rem;
+    display: inline-block;
+    margin-top: 1rem;
+}
+.project .container .project-box p {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+
+/* portfolio */
+#portfolio {
+    text-align: center;
+}
+#portfolio .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#portfolio .container .portfolio-box {
+    width: 32%;
+    height: 25rem;
+    position: relative;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+#portfolio .container .portfolio-box .portfolio-box-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#portfolio .container .portfolio-box .portfolio-box-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#portfolio .container .portfolio-box .portfolio-box-text {
+    position: absolute;
+    background-color: rgba(255,255,255,0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: "Quicksand";
+    font-weight: bold;
+    transform: translateY(-100%);
+}
+#portfolio .container .portfolio-box:hover .portfolio-box-text {
+    transform: translateY(0%);
+}
+
+/* about */
+#about h1, #about p {
+    text-align: center;
+}
+#about .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#about .container h1,
+#about .container p {
+    text-align: left;
+}
+#about .container .about-img {
+    width: 30%;
+    text-align: center;
+}
+#about .container .about-img img {
+    width: 15vw;
+    height: 15vw;
+}
+#about .container .about-content {
+    width: 70%;
+}
+#about .container .about-content .icons i {
+    padding: 2rem 2rem 2rem 0rem;
+    font-size: 2rem;
+    color: #4d5168;
+    cursor: pointer;
+}
+#about .container .about-content .icons i:hover {
+    color: var(--site-color);
+}
+/*location */
+.location {
+    background: linear-gradient(to right, var(--site-color), #11D8C4);
+}
+.location .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    flex-wrap: wrap;
+}
+.location .container.location-box {
+    text-align: center;
+}
+/* JD */
+.JD .container .JD-box .JD-post .JD-content {
+    width: 50%;
+}
+.JD .JD-post img {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    border: 1px solid var(--site-color);
+    margin-left: 50px;
+}
+.JD .JD-content {
+    color: #333;
+}
+.JD .container .JD-post .JD-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#up {
+    background-color: darkgray;
+    position: fixed;
+    right: 5rem;
+    bottom: 5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 4rem;
+    cursor: pointer;
+    opacity: 0;
+
+}
+#up:hover {
+    background-color: var(--site-color);
+}
+
+/********
+ Media Query 
+ **********/
+ @media (max-width: 992px) {
+
+    /* navbar */
+    .toggle {
+        display: block;
+    }
+    .navbar-menu {
+        display: none;
+        width: 100%;
+    }
+    .navbar-menu li {
+        display: block;
+    }
+    .toggle:hover ~ .navbar-menu {
+        display: block;
+    }
+
+    /* project */
+    .project .container {
+        padding-bottom: 2rem;
+    }
+    .project .container .project-box {
+        width: 40%;
+    }
+    .project .container .project-box p {
+        border-radius: 1rem;
+    }
+
+    /* portfolio */
+    #portfolio .container .portfolio-box {
+        width: 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* home */
+    #home .container {
+        flex-wrap: wrap-reverse;
+    }
+    #home .home-content,
+    #home .home-img {
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    #home .home-img img {
+        width: 40vw;
+        height: 40vw;
+    }
+    /* service */
+    .service-body .service-img,
+    .service-body .service-content {
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    /* service */
+    .service-box .service-box-img,
+    .service-box .service-box-content {
+        width: 100%;
+    }
+    .service-box .service-box-img {
+        text-align: center;
+    }
+    .service-box .service-box-content {
+        text-align: justify;
+    }
+    .service-box .service-box-img svg {
+        width: 10vw;
+    }
+    /* project */
+    .project .container .project-box {
+        width: 100%;
+    }
+
+    /* portfolio */
+    #portfolio .container .portfolio-box {
+        width: 100%;
+    }
+}
+.navbar-menu.active {
+    display: block;
+}
